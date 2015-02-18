@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7515.2" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BitWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="0.0" textAlignment="center" id="1LE-p5-7tM"/>
+                        <group width="1" alignment="left" id="k0L-0V-QOp">
+                            <items>
+                                <imageView width="32" height="32" alignment="center" id="7R6-lE-QBC"/>
+                                <label alignment="center" verticalAlignment="center" text="1BTC" id="xkz-RH-FTX"/>
+                            </items>
+                        </group>
+                        <label alignment="center" verticalAlignment="bottom" text="Last Updated" id="eds-Pg-fn6">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Refresh" id="kQn-ej-Zye">
+                            <connections>
+                                <action selector="refreshTapped" destination="AgC-eL-Hgc" id="qpC-4t-iQm"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="7R6-lE-QBC" id="60h-0G-WHI"/>
+                        <outlet property="lastUpdatedLabel" destination="eds-Pg-fn6" id="wju-KT-fcc"/>
+                        <outlet property="priceLabel" destination="1LE-p5-7tM" id="3OU-tu-l5F"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
